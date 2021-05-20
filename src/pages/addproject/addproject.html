@@ -1,0 +1,26 @@
+<!--
+  Generated template for the AddprojectPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>Ajouter projet</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    <ion-item>
+        <ion-label floating>Titre </ion-label>
+        <ion-input  [(ngModel)]="projet.title"></ion-input>
+        
+    </ion-item>
+    
+      <ion-buttons  align="center">
+        <button ion-button  round (click)="AjouterProjet()" >Ajouter</button>
+
+</ion-buttons>
+      
+   
+</ion-content>

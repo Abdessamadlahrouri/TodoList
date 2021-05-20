@@ -1,0 +1,60 @@
+page-timeline {
+    ion-thumbnail{
+        line-height: 65px !important;
+        border-right: 2px solid #488aff !important;
+       
+        padding-right: 10px !important;
+        
+    }
+    ion-item:active {color:rgb(38, 0, 173)}
+
+
+    
+
+    ion-item-group:before {
+        font-family: "Ionicons";
+        content: "\f280";
+        position: absolute;
+        left: 151px;
+        top: 70px;
+        font-size: 30px;
+        color: #488aff;
+
+    }
+    ion-checkbox{
+        visibility: hidden;
+    }
+    
+
+    .statut_on{
+    }
+
+    .statut_off{
+        color:grey !important;
+        text-decoration: line-through;
+
+    }
+
+    .header-md::after, .tabs-md[tabsPlacement="top"] > .tabbar::after, .footer-md::before, .tabs-md[tabsPlacement="bottom"] > .tabbar::before{
+        bottom: -1px !important;
+    }
+    
+.toolbar-background-md{
+    background-image: transparent !important;
+
+
+}
+.create{
+    width: 60px !important;
+    background: #0bb1d3 !important;
+    
+    color: #fff;
+}
+
+.delete{
+    width: 60px !important;
+    background: #9f2fff !important;
+    
+    color: #fff;
+}
+}

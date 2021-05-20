@@ -1,0 +1,32 @@
+
+<ion-content padding>
+           <ion-row>
+              <img src="assets/imgs/logo.svg" width="150">
+
+           </ion-row>
+
+           <ion-item >
+              <ion-label hidden>les comptes existant</ion-label>
+      
+            <ion-select placeholder="sélectionner un compte" [ngModel]="selectU" #mySelect  (ngModelChange)="change($event)" okText="Confirm" cancelText="Annuler" >
+              <ion-option *ngFor="let getUser of users" value="{{getUser.user_id}}" >{{ getUser.username }}</ion-option>
+              </ion-select>
+       
+        </ion-item>
+        <ion-item>
+              <ion-label color="primary" ><ion-icon name="lock"></ion-icon>  </ion-label>
+              
+              <!--<button ion-button color="transparent"><ion-icon left name="eye"  color="primary"></ion-icon></button>-->
+          
+            
+            <ion-input type="password" placeholder="Mot de passe" required [(ngModel)]="anass"></ion-input>
+        
+          </ion-item>
+      <button ion-button full color="primary" margin-top (click)="login()">s'identifier</button>
+      <ion-item >
+        <ion-label color="primary" class="center label" (click)="forgotPassword()">J'ai oublié le mot de passe?</ion-label>
+      </ion-item>
+        <div align="center">
+      <button  ion-button color="secondary" margin-top (click)="register()" class="loginbtn"> s'inscrire </button>
+      </div>
+      </ion-content>

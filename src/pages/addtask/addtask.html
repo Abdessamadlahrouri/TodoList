@@ -1,0 +1,48 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+          Ajouter une tâche
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+    
+    <ion-list>
+
+     
+        <ion-item>
+            <ion-label floating >Titre </ion-label>
+            <ion-input [(ngModel)]="task.title"></ion-input>
+        </ion-item>
+      <ion-item>
+      <ion-label floating>Description </ion-label>
+            <ion-input [(ngModel)]="task.description"></ion-input>
+      </ion-item>
+    <ion-item>
+      
+        <ion-label floating>Category</ion-label>
+        <ion-select [(ngModel)]="task.category" (ionChange)="getcat()" >
+          <ion-option value="{{item.cat_id}}" *ngFor="let item of categoris">{{item.cat_name}}</ion-option>
+        </ion-select>
+      </ion-item>
+      
+      <ion-item>
+        <ion-label floating>Date Debut </ion-label>
+        <ion-datetime [(ngModel)]="task.date_deb" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD MMMM YYYY HH:mm" [(ngModel)]="myDatedeb"></ion-datetime>
+      </ion-item>
+      <ion-item >
+
+          <ion-buttons  align="center">
+              <button ion-button  round (click)="AjouterTask()" >Ajouter</button>
+    
+    </ion-buttons>
+      
+    
+ 
+    </ion-item>
+      </ion-list>
+     
+  </ion-content>
+  

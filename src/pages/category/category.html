@@ -1,0 +1,54 @@
+<ion-header>
+    <ion-navbar>
+      <ion-title>
+        Category
+      </ion-title>
+    </ion-navbar>
+  </ion-header>
+  
+  <ion-content padding>
+    
+    
+    <ion-list>
+        <ion-item>
+            <ion-label position="floating">Titre :</ion-label>
+            <ion-input></ion-input>
+        </ion-item>
+      <ion-item>
+      <ion-label position="floating">Description :</ion-label>
+            <ion-input></ion-input>
+      </ion-item>
+    <ion-item>
+        <ion-label>Categories</ion-label>
+        <ion-select [(ngModel)]="Categories">
+          <ion-option value="categ1">Category 1</ion-option>
+          <ion-option value="categ2">Category 2</ion-option>
+          <ion-option value="categ3">Category 3</ion-option>
+          <ion-option value="categ4">Category 4</ion-option>
+          
+        </ion-select>
+      </ion-item>
+
+      <ion-item>
+        <ion-label>Date Debut :</ion-label>
+        <ion-datetime displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD MMMM YYYY HH:mm" [(ngModel)]="myDatedeb"></ion-datetime>
+      </ion-item>
+      <ion-item>
+          <ion-label>Date Fin :</ion-label>
+          <ion-datetime max="2031" displayFormat="DD/MM/YYYY" pickerFormat="DD MMMM YYYY HH:mm" [(ngModel)]="myDatefin"></ion-datetime>
+        </ion-item>
+      <ion-item >
+      
+        
+          <ion-buttons  align="center">
+              <button ion-button  round>Ajouter</button>
+    
+    </ion-buttons>
+      
+    
+ 
+    </ion-item>
+      </ion-list>
+     
+  </ion-content>
+  

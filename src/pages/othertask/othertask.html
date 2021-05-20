@@ -1,0 +1,44 @@
+<!--
+  Generated template for the OthertaskPage page.
+
+  See http://ionicframework.com/docs/components/#navigation for more info on
+  Ionic pages and navigation.
+-->
+<ion-header>
+  <ion-navbar>
+    <ion-title>othertask</ion-title>
+  </ion-navbar>
+</ion-header>
+
+<ion-content padding>
+    
+    
+  <ion-list>
+
+   
+      <ion-item>
+          <ion-label floating >Titre </ion-label>
+          <ion-input [(ngModel)]="timeline.title"></ion-input>
+      </ion-item>
+    <ion-item>
+    <ion-label floating>Description </ion-label>
+          <ion-input [(ngModel)]="timeline.description"></ion-input>
+    </ion-item>
+  
+    <ion-item>
+      <ion-label floating>Date Debut </ion-label>
+      <ion-datetime [(ngModel)]="timeline.date_deb" displayFormat="DD/MM/YYYY HH:mm" pickerFormat="DD MMMM YYYY HH:mm" [(ngModel)]="myDatedeb"></ion-datetime>
+    </ion-item>
+    <ion-item >
+
+        <ion-buttons  align="center">
+          <button ion-button  round (click)="AjouterTimeline()" >Ajouter</button>
+  
+  </ion-buttons>
+    
+  
+
+  </ion-item>
+    </ion-list>
+   
+</ion-content>
